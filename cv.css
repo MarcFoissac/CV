@@ -1,14 +1,47 @@
 body {
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
-  background-color: rgba(234, 209, 173, 0.3);
+  background-color: ghostwhite;  
+  /* border: 4px dotted darkgoldenrod; */
 }
 
 #container {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
   display: grid;
-  grid-template-rows: 30px 2fr 8fr;
-  grid-template-columns: 3fr 7fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-columns: 200px 1fr;
+  border-right: 3px double #00ae4b;
+  border-bottom: 3px double #00ae4b;
+  /* border-top-right-radius: 3%; */
+  border-bottom-right-radius: 6%;
+  border-bottom-left-radius: 6%;
+}
+
+#me {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 20px;
+}
+
+#my-picture {
+  height: 60%;
+  width: 80%;
+  margin-bottom: 15px;
+  object-fit: fill;
+  border-radius: 50%;
+  border: 3px solid #8064a2;
 }
 
 #nav-bar {
@@ -19,19 +52,6 @@ body {
   display: flex;
   justify-content: right;
   padding-right: 15px;
-  border-bottom: 0.5px solid aliceblue;
-}
-
-#side-content {
-  grid-row-start: 1;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-right: 5px dashed #00b050;
 }
 
 #title-block {
@@ -41,32 +61,171 @@ body {
   grid-column-end: 3;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  border: 2px solid firebrick;
+  align-items: center;
+  gap: 20px;
+  /* border: 2px solid orchid; */
+}
+
+h1 {
+  text-align: center;
+  color: #8064a2;
+  font-family: Quantico;
+  font-size: 30px;
+}
+
+.separator {
+  border: 1px solid #00ae4b;
+  width: 75%;
+}
+
+#intro {
+  padding: 5px;
+  width: 95%;
+  text-align: justify;
+  font-family: 'Elms Sans';
+  font-size: 14px;
+  /* border: 2px solid lightblue; */
+}
+
+
+h2 {
+  color: #8064a2;
+  font-family: Quantico;
+  font-size: 20px;
 }
 
 #main-content {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 2;
-  grid-column-end: 3;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  border: 2px dashed mediumturquoise;
+  align-items: center;
+  padding: 15px;
+  padding-bottom: 5px;
+  margin-top: -5px;
+  border-left: 3px double #00ae4b;
+  border-bottom: 3px double #00ae4b;
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 6%;
 }
 
-#my-picture {
-  height: 300px;
-  width: 80%;
-  border-radius: 70%;
-  border-color: 3px solid #8064a2;
+.section {
+  width: 100%;
+  font-family: 'Elms Sans';
+  font-size: 12px;
+}
+
+h3 {
+  color: #8064a2;
+  text-decoration: underline;
+  text-decoration-color: #00ae4b;
+  margin-bottom: 0px;
+  font-family: Anta;
+  font-size: 16px;
 }
 
 span {
   font-weight: bold;
 }
 
-#subsublist {
+ul {
+  list-style: circle;
+  line-height: 20px;
+}
+
+/* #experiences>ul>li>span {
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: #00ae4b;
+} */
+
+.job-desc {
+  font-family: 'Elms Sans';
+  font-size: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  line-height: 15px;
+  text-align: justify;
+  border-left: 1px solid #8064a2;
+  border-bottom: 1px solid #8064a2;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 6%;
+}
+
+.job-desc>span, .sublist>ul>li>span {
   font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #00ae4b;
+}
+
+.sublist>ul {
+  list-style: none;
+  line-height: 15px;
+}
+
+#misc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 15px 0px 20px 0px;
+}
+
+h4 {
+  color: #8064a2;
+  text-decoration: underline;
+  text-decoration-color: #00ae4b;
+  margin-bottom: 0px;
+  font-family: Anta;
+  font-size: 14px;
+}
+
+.subsection {
+  height: 100%;
+  text-align: center;
+}
+
+.first-subsection {
+  width: 30vw;
+}
+
+.second-subsection {
+  width: 40vw;
+  padding: 0px 20px;
+  border-left: 1px solid #8064a2;
+  border-right: 1px solid #8064a2;
+}
+
+.third-subsection {
+  width: 30vw;
+}
+
+#infos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: -5px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  gap: 5px;
+}
+
+.info>p {
+  font-family: 'Elms Sans';
+  font-size: 10px;
+}
+
+.vertical-separator {
+  height: 20px;
+  border-left: 1px solid #8064a2;
+}
+
+::selection {
+  color: ghostwhite;
+  background-color: #8064a2;
 }
