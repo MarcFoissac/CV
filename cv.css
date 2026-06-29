@@ -6,7 +6,7 @@ body {
 }
 
 #container {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
 }
@@ -52,6 +52,18 @@ body {
   display: flex;
   justify-content: right;
   padding-right: 15px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-family: Quantico;
+  color: ghostwhite;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #8064a2;
 }
 
 #title-block {
@@ -228,4 +240,12 @@ h4 {
 ::selection {
   color: ghostwhite;
   background-color: #8064a2;
+}
+
+.fr {
+  display: block;
+}
+
+.en {
+  display: none;
 }
