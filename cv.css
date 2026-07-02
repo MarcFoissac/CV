@@ -99,6 +99,32 @@ h1 {
   /* border: 2px solid lightblue; */
 }
 
+#infos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 10px; */
+  margin-bottom: -5px;
+  margin-left: 15%;
+  /* border: 2px solid crimson; */
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  gap: 5px;
+}
+
+.info>p {
+  font-family: 'Elms Sans';
+  font-size: 10px;
+}
+
+.vertical-separator {
+  height: 20px;
+  border-left: 1px solid #8064a2;
+}
 
 h2 {
   color: #8064a2;
@@ -210,31 +236,6 @@ h4 {
 
 .third-subsection {
   width: 30vw;
-}
-
-#infos {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: -5px;
-}
-
-.info {
-  display: flex;
-  align-items: center;
-  height: 25px;
-  gap: 5px;
-}
-
-.info>p {
-  font-family: 'Elms Sans';
-  font-size: 10px;
-}
-
-.vertical-separator {
-  height: 20px;
-  border-left: 1px solid #8064a2;
 }
 
 ::selection {
